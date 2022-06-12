@@ -4,6 +4,86 @@
     box-sizing: border-box;
 }
 
+:root {
+    --background-color: linear-gradient(hsl(273, 75%, 66%), hsl(240, 73%, 65%));
+    font-size: 12px;
+}
+
+body {
+
+    background: var(--background-color);
+    height: 100vh;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+
+#faq {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    height: 70vh;
+    width: 65%;
+    margin: 0 auto;
+    border: 35px;
+    background-color: white;
+    border-radius: 20px;
+}
+
+.images {
+    display: flex;
+    width: 45%;
+    align-items: center;
+    background: url(images/bg-pattern-desktop.svg) 50% 50% no-repeat;
+    background-size: 220%;
+    background-position-x: 107%;
+    background-position-y: 74%;
+    contain: content;
+
+}
+
+.img-in {
+    position: relative;
+    transform: scale(0.9);
+    left: -8rem;
+    bottom: 2rem;
+}
+
+.main::before {
+    content: url(images/illustration-box-desktop.svg);
+    position: relative;
+    right: 32.5%;
+    top: 40%;
+    margin: -7.15rem;
+    z-index: 1;
+    transform: scale(0.9);
+
+}
+
+
+h2 {
+    text-transform: uppercase;
+}
+
+.card {
+    align-self: center;
+    width: 45%;
+    border: none;
+    margin-right: 6.2rem;
+}
+
+.accordion-item {
+    margin: 1rem;
+}
+
+/* Footer */
+
 .attribution {
     font-size: 11px;
     text-align: center;
