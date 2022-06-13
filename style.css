@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -6,7 +8,8 @@
 
 :root {
     --background-color: linear-gradient(hsl(273, 75%, 66%), hsl(240, 73%, 65%));
-    font-size: 12px;
+    font-family: 'Kumbh Sans', sans-serif;
+    font-stretch: ultra-condensed;
 }
 
 body {
@@ -20,69 +23,107 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: 98vh;
 }
 
 
 #faq {
-    position: relative;
     display: flex;
-    justify-content: space-between;
-    height: 70vh;
+    justify-content: center;
+    align-items: center;
+    align-content: space-between;
+    height: 65%;
     width: 65%;
     margin: 0 auto;
-    border: 35px;
-    background-color: white;
+    background-color: #fefefe;
     border-radius: 20px;
-}
-
-.images {
-    display: flex;
-    width: 45%;
-    align-items: center;
-    background: url(images/bg-pattern-desktop.svg) 50% 50% no-repeat;
-    background-size: 220%;
-    background-position-x: 107%;
-    background-position-y: 74%;
     contain: content;
 
 }
 
+.images {
+    display: flex;
+    flex: 50%;
+    align-items: center;
+    height: 100%;
+
+}
+
+.images::after {
+    content: url("images/bg-pattern-desktop.svg");
+    position: absolute;
+    margin-left: -35rem;
+    margin-top: -8rem;
+    z-index: -1;
+}
+
 .img-in {
     position: relative;
-    transform: scale(0.9);
-    left: -8rem;
-    bottom: 2rem;
+    left: -15%;
 }
 
 .main::before {
     content: url(images/illustration-box-desktop.svg);
     position: relative;
     right: 32.5%;
-    top: 40%;
+    top: 37%;
     margin: -7.15rem;
     z-index: 1;
-    transform: scale(0.9);
-
 }
-
 
 h2 {
     text-transform: uppercase;
+    font-weight: 700;
+
 }
 
 .card {
-    align-self: center;
-    width: 45%;
+    display: flex;
+    flex: 50%;
     border: none;
-    margin-right: 6.2rem;
 }
 
-.accordion-item {
-    margin: 1rem;
+.accordion {
+    --bs-accordion-active-color: black;
+    --bs-accordion-active-bg: none;
+    --bs-accordion-btn-focus-box-shadow: none;
+    width: 80%;
+    align-self: flex-start;
+}
+
+.accordion-button,
+.accordion-body {
+    padding-left: 0;
+}
+
+.accordion-button {
+    font-size: 75%;
+    padding-bottom: 1rem;
+}
+
+.accordion-button::after {
+    transform: scale(0.5);
+    background-image: url(images/icon-arrow-down.svg);
+}
+
+.accordion-button:not(.collapsed)::after {
+    transform: scale(0.5);
+    background-image: url(images/icon-arrow-up.svg);
+}
+
+.accordion-body {
+    font-size: 12px;
+    padding-top: 0;
 }
 
 /* Footer */
+
+footer {
+    position: absolute;
+    margin: 0 auto;
+    bottom: 0;
+    height: 2vh;
+}
 
 .attribution {
     font-size: 11px;
