@@ -38,7 +38,7 @@ body {
     background-color: #fefefe;
     border-radius: 20px;
     contain: content;
-
+    box-shadow: 2px 3px 25px 0 #000000;
 }
 
 .images {
@@ -46,7 +46,7 @@ body {
     flex: 50%;
     align-items: center;
     height: 100%;
-
+    flex-shrink: 2;
 }
 
 .images::after {
@@ -55,6 +55,7 @@ body {
     margin-left: -35rem;
     margin-top: -8rem;
     z-index: -1;
+
 }
 
 .img-in {
@@ -81,6 +82,7 @@ h2 {
     display: flex;
     flex: 50%;
     border: none;
+    flex-grow: 2;
 }
 
 .accordion {
@@ -116,6 +118,8 @@ h2 {
     padding-top: 0;
 }
 
+
+
 /* Footer */
 
 footer {
@@ -132,4 +136,52 @@ footer {
 
 .attribution a {
     color: hsl(228, 45%, 44%);
+}
+
+@media screen and (max-width: 480px) {
+    #faq {
+        flex-direction: column;
+        width: 85%;
+        contain: initial;
+
+    }
+
+    h2 {
+        text-align: center;
+        font-size: 2rem;
+    }
+
+
+
+    .card {
+        transform: scale(0.9);
+        text-align: center;
+        margin-top: -10rem;
+    }
+
+    .accordion {
+        width: 100%
+    }
+
+    .images {
+        height: 5%;
+        transform: scale(0.5);
+        position: relative;
+        bottom: 3.5rem;
+
+    }
+
+    .img-in {
+        position: relative;
+        bottom: 15rem;
+        left: 0;
+
+    }
+
+    .images::after {
+        transform: scale(0.5);
+        margin-left: -15.5rem;
+        margin-top: -29rem;
+    }
+
 }
